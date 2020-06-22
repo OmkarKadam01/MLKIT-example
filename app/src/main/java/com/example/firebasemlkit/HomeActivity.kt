@@ -44,7 +44,7 @@ class HomeActivity : AppCompatActivity(), WordAdapter.ItemClickListener {
         adapter?.setClickListener(this)
         recyclerView?.adapter = adapter
         dispatchTakePictureIntent()
-        retake.setOnClickListener {dispatchTakePictureIntent()  }
+        retake.setOnClickListener { dispatchTakePictureIntent() }
     }
 
     private fun dispatchTakePictureIntent() {
@@ -63,7 +63,7 @@ class HomeActivity : AppCompatActivity(), WordAdapter.ItemClickListener {
             val image = FirebaseVisionImage.fromBitmap(imageBitmap)
             recognizeText(image)
             createImageFile()
-           // setPic()
+            // setPic()
         }
     }
 
@@ -155,11 +155,11 @@ class HomeActivity : AppCompatActivity(), WordAdapter.ItemClickListener {
                         Log.e("Android", text)
                         wordsList.add(text)
                         for (line in block.lines) {
-                //            Log.e("Android1", line.text)
+                            //            Log.e("Android1", line.text)
                             // ...
                             for (element in line.elements) {
                                 // ...
-                //                Log.e("Android2", element.text)
+                                //                Log.e("Android2", element.text)
                             }
                         }
                     }
@@ -175,11 +175,9 @@ class HomeActivity : AppCompatActivity(), WordAdapter.ItemClickListener {
     }
 
     fun showText() {
-        // Task failed with an exception
-
     }
 
     override fun onItemClick(view: View?, position: Int) {
-        Toast.makeText(this,wordsList[position],Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, wordsList[position], Toast.LENGTH_SHORT).show()
     }
 }
