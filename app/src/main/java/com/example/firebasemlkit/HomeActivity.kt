@@ -175,6 +175,8 @@ class HomeActivity : AppCompatActivity(), WordAdapter.ItemClickListener {
     }
 
     fun showText() {
+        // Task failed with an exception
+
     }
 
     override fun onItemClick(view: View?, position: Int) {
